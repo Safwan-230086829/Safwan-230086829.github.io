@@ -1126,6 +1126,38 @@
       </div>
     </div>
 
+    <!-- Wet Bulb Temperature Monitor (Product V1, Firmware V2) -->
+    <div class="project-card reveal">
+      <div class="project-tags">
+        <span class="tag">Personal</span>
+        <span class="tag">IoT</span>
+        <span class="tag lime">ESP32</span>
+      </div>
+      <div class="project-num">07</div>
+      <h3 class="project-title">Wet Bulb Temperature Monitor</h3>
+      <p class="project-subtitle">Personal Project · Independent Build · Product V1 (Firmware V2) · Upgrade of the Arduino Temperature Sensor</p>
+      <p class="project-desc">
+        A dual-core, Wi-Fi-connected wet-bulb monitor built on an ESP32,
+        upgrading the original Arduino temperature sensor. This is the first
+        product revision, running on the second iteration of the firmware.
+        Wet-bulb temperature is derived from live air temperature and humidity
+        readings using Stull's (2011) empirical approximation, then surfaced
+        through both an onboard OLED display and a live web dashboard.
+      </p>
+      <ul class="project-highlights">
+        <li>FreeRTOS task split across both ESP32 cores — sensor sampling, button input and OLED rendering on Core 1; Wi-Fi and the web server on Core 0</li>
+        <li>Wet-bulb temperature calculated from DHT11 temperature/humidity readings via Stull's empirical formula</li>
+        <li>SSD1306 OLED with boot animation, single-click cycling between wet-bulb, air temperature and humidity views, long-press °C/°F toggle, and automatic sleep with wake-on-press</li>
+        <li>RGB LED status indicator — green, amber, or red depending on configurable caution and alert wet-bulb thresholds</li>
+        <li>Onboard web server hosting a live-updating dashboard with a server-rendered SVG history graph and a safe/caution/alert status badge</li>
+        <li>Independent °C/°F unit toggles for the OLED and the web dashboard</li>
+      </ul>
+      <div style="margin-top: 12px; padding: 14px 18px; border: 1px solid rgba(170,255,0,0.18); background: var(--lime-dim);">
+        <div style="font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lime); margin-bottom: 6px;">Tools</div>
+        <div style="font-size: 12px; color: var(--text-secondary);">ESP32 · FreeRTOS · Arduino/C++ · DHT11 · SSD1306 OLED · Embedded Web Server</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
